@@ -3,11 +3,9 @@
     let css = document.createElement('link');
     css.href = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css';
     css.rel = 'stylesheet';
-    document.head.appendChild(css);
 
     let script = document.createElement('script');
     script.src = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js';
-    document.head.appendChild(script);
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -21,7 +19,9 @@
 
 		constructor() {
 			super(); 
-			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(css.cloneNode(true));
+            this._shadowRoot.appendChild(script.cloneNode(true));
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 		}

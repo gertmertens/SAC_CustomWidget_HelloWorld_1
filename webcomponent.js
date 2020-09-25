@@ -96,7 +96,7 @@
 
             return $('#editor').summernote('code');
         }
-        
+
         set widgetText(value) {
             this._widgetText = value;
             $('#editor').summernote('code', this._widgetText);

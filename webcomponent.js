@@ -22,12 +22,10 @@
 		constructor() {
 			super(); 
             this.appendChild(tmpl.content.cloneNode(true));
-            this._firstConnection = false;
 		}
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
-            this._firstConnection = true;
             this.redraw();
         }
 
@@ -49,9 +47,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             console.log("After update:" + this._widgetText);
 
-            if (this._firstConnection){
-                this.redraw();
-            }
+            this.redraw();
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -87,7 +83,7 @@
                   ['insert', ['link', 'picture', 'video']],
                   ['view', ['fullscreen', 'codeview', 'help']]
                 ]
-              });
+            });
         }
 
         get widgetText() {

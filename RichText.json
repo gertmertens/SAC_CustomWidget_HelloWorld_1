@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
-            "url": "https://gitlab.com/api/v4/projects/merteg1%2Fugent-rich-text-editor/repository/files/webcomponent.js/raw?ref=master&private_token=VyKKmsYayBRLozs4xbkD",
+            "url": "https://gertmertens.github.io/SAC_CustomWidget_HelloWorld_1/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }

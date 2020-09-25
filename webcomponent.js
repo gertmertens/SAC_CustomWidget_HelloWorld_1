@@ -12,8 +12,6 @@
         <div id="editor"></div>
     `;
 
-    script.onload = () =>
-
     customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
 
 

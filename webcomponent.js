@@ -12,6 +12,9 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <div id="editor">
+            <p>Hello World!</p>
+            <p>Some initial <strong>bold</strong> text</p>
+            <p><br></p>
         </div>
     `;
 
@@ -66,7 +69,7 @@
             var ctx = this._shadowRoot.getElementById("editor");
             console.log(ctx);
 
-            var quill = new Quill('#editor', {
+            var quill = new Quill(ctx, {
                 theme: 'snow'
             });
             console.log(quill);

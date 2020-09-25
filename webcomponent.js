@@ -21,10 +21,11 @@
 
 		constructor() {
 			super(); 
-            this._shadowRoot = this.attachShadow({mode: "open"});
-            this._shadowRoot.appendChild(css.cloneNode(true));
-            this._shadowRoot.appendChild(script.cloneNode(true));
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            // this._shadowRoot = this.attachShadow({mode: "open"});
+            // this._shadowRoot.appendChild(css.cloneNode(true));
+            // this._shadowRoot.appendChild(script.cloneNode(true));
+            this.appendChild(tmpl.content.cloneNode(true));
+            // this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 		}
 
@@ -66,8 +67,8 @@
         */
 
         redraw(){
-            var ctx = this._shadowRoot.getElementById("editor");
-            console.log(ctx);
+            // var ctx = this._shadowRoot.getElementById("editor");
+            // console.log(ctx);
             console.log($("#editor"));
             console.log(document.getElementById("editor"));
         }

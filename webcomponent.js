@@ -1,7 +1,12 @@
 (function()  {
 
+    let scriptQuillCssSnow = document.createElement('link');
+    scriptQuillCssSnow.href = '//cdn.quilljs.com/1.3.6/quill.snow.css';
+    scriptQuillCssSnow.rel = 'stylesheet';
+    document.head.appendChild(scriptQuillCssSnow);
+
     let scriptQuillCss = document.createElement('link');
-    scriptQuillCss.href = '//cdn.quilljs.com/1.3.6/quill.snow.css';
+    scriptQuillCss.href = '//cdn.quilljs.com/1.3.6/quill.core.css';
     scriptQuillCss.rel = 'stylesheet';
     document.head.appendChild(scriptQuillCss);
 

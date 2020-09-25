@@ -18,8 +18,28 @@
         }
     ],
 	"properties": {
+		"widgetText": {
+			"type": "string",
+			"description": "The text of the editor."
+		}
 	},
 	"methods": {
+		"getText": {
+			"description": "Get the text value of the widget",
+			"body": "return this.widgetText;",
+			"returnType": "string"
+		},
+		"setText": {
+			"description": "Set the text value of the widget",
+			"parameters": [
+				{
+					"name": "newTextValue",
+					"type": "string",
+					"description": "The content of the rich text editor"
+				}
+			],
+			"body": "this.widgetText = newTextValue;"
+		}
 	},
 	"events": {
 	}

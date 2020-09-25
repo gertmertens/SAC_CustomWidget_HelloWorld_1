@@ -68,21 +68,8 @@
         redraw(){
             var ctx = this._shadowRoot.getElementById("editor");
             console.log(ctx);
-
-            ctx.summernote({
-                placeholder: 'Write here your comment',
-                tabsize: 2,
-                height: 120,
-                toolbar: [
-                  ['style', ['style']],
-                  ['font', ['bold', 'underline', 'clear']],
-                  ['color', ['color']],
-                  ['para', ['ul', 'ol', 'paragraph']],
-                  ['table', ['table']],
-                  ['insert', ['link', 'picture', 'video']],
-                  ['view', ['fullscreen', 'codeview', 'help']]
-                ]
-            });
+            console.log($("#editor"));
+            console.log(document.getElementById("editor"));
         }
     });
 })();

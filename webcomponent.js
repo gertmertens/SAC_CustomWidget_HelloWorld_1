@@ -1,29 +1,20 @@
 (function()  {
 
-    let scriptQuillCssSnow = document.createElement('link');
-    scriptQuillCssSnow.href = '//cdn.quilljs.com/1.3.6/quill.snow.css';
-    scriptQuillCssSnow.rel = 'stylesheet';
-    document.head.appendChild(scriptQuillCssSnow);
+    let css = document.createElement('link');
+    css.href = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css';
+    css.rel = 'stylesheet';
+    document.head.appendChild(css);
 
-    let scriptQuillCss = document.createElement('link');
-    scriptQuillCss.href = '//cdn.quilljs.com/1.3.6/quill.core.css';
-    scriptQuillCss.rel = 'stylesheet';
-    document.head.appendChild(scriptQuillCss);
-
-    let scriptQuill = document.createElement('script');
-    scriptQuill.src = '//cdn.quilljs.com/1.3.6/quill.min.js';
-    document.head.appendChild(scriptQuill);
+    let script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js';
+    document.head.appendChild(script);
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <div id="editor">
-            <p>Hello World!</p>
-            <p>Some initial <strong>bold</strong> text</p>
-            <p><br></p>
-        </div>
+        <div id="editor">Hello Summernote</div>
     `;
 
-    scriptQuill.onload = () =>
+    script.onload = () =>
 
     customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
 
@@ -76,10 +67,7 @@
             var ctx = this._shadowRoot.getElementById("editor");
             console.log(ctx);
 
-            var quill = new Quill(ctx, {
-                theme: 'snow'
-            });
-            console.log(quill);
+            octx.summernote();
         }
     });
 })();

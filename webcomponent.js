@@ -92,14 +92,14 @@
 
         get widgetText() {
             console.log("Getter: " + this._widgetText);
-            console.log("Getter: " + $('#editor').summernote ('code', '<b> hello world </ b>'));
+            console.log("Getter: " + $('#editor').summernote('code', '<b> hello world </ b>'));
 
-            return $('#editor').summernote ('code');
+            return $('#editor').summernote('code');
         }
         
         set widgetText(value) {
             this._widgetText = value;
-            $('#editor').summernote ('code', this._widgetText);
+            $('#editor').summernote('code', this._widgetText);
 
             console.log("Setter: " + this._widgetText);
         }

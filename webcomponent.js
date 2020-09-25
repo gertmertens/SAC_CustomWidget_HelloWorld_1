@@ -71,7 +71,7 @@
             var ctx = this._shadowRoot.getElementById("editor");
             console.log(ctx);
 
-            var quill = new Quill(ctx, {
+            var quill = new Quill('#editor', {
                 theme: 'snow'
             });
             console.log(quill);

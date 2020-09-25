@@ -1,5 +1,9 @@
 (function()  {
-    
+
+    // let scriptQuill = document.createElement('script');
+    // scriptQuill.src = '//cdn.quilljs.com/1.3.6/quill.min.js';
+    // document.head.appendChild(scriptQuill);
+
     /*!
     * Quill Editor v1.3.6
     * https://quilljs.com/

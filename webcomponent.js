@@ -29,7 +29,6 @@
         connectedCallback(){
             this._firstConnection = true;
             this.redraw();
-            console.log("Now 1");
         }
 
          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
@@ -39,7 +38,7 @@
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-            console.log("Now 2");
+            
 		}
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
@@ -47,8 +46,6 @@
             if (this._firstConnection){
                 this.redraw();
             }
-
-            console.log("Now 3");
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
@@ -66,6 +63,13 @@
         */
 
         redraw(){
+            var ctx = this._shadowRoot.getElementById("editor");
+            console.log(ctx);
+
+            var quill = new Quill('#editor', {
+                theme: 'snow'
+            });
+            console.log(quill);
         }
     });
 })();

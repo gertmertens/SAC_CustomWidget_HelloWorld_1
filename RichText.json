@@ -1,8 +1,8 @@
 {
 	"name": "Hello World Step 1",
-	"description": "Test",
+	"description": "Test Hello World Flexso",
 	"eula": "",
-	"vendor": "",
+	"vendor": "Flexso",
 	"license": "",
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "HelloWorld1",

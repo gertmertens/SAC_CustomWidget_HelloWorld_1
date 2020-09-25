@@ -1,17 +1,17 @@
 (function()  {
 
     let css = document.createElement('link');
-    css.href = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css';
+    css.href = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css';
     css.rel = 'stylesheet';
     document.head.appendChild(css);
 
     let script = document.createElement('script');
-    script.src = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js';
+    script.src = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js';
     document.head.appendChild(script);
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <div id="editor">Hello Summernote</div>
+        <div id="editor"></div>
     `;
 
     script.onload = () =>
@@ -67,7 +67,20 @@
             var ctx = this._shadowRoot.getElementById("editor");
             console.log(ctx);
 
-            octx.summernote();
+            ctx.summernote({
+                placeholder: 'Write here your comment',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                  ['style', ['style']],
+                  ['font', ['bold', 'underline', 'clear']],
+                  ['color', ['color']],
+                  ['para', ['ul', 'ol', 'paragraph']],
+                  ['table', ['table']],
+                  ['insert', ['link', 'picture', 'video']],
+                  ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
         }
     });
 })();

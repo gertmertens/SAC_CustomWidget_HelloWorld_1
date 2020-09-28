@@ -89,7 +89,7 @@
         getWidgetText() {
             console.log("getWidgetText");
             console.log("Getter: " + this._widgetText);
-            console.log("Getter: " + $('#editor').summernote('code', '<b> hello world </ b>'));
+            console.log("Getter: " + $('#editor').summernote('code'));
 
             return $('#editor').summernote('code');
         }

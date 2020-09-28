@@ -86,17 +86,35 @@
             });
         }
 
-        get widgetText() {
+        getWidgetText() {
+            console.log("getWidgetText");
             console.log("Getter: " + this._widgetText);
             console.log("Getter: " + $('#editor').summernote('code', '<b> hello world </ b>'));
 
             return $('#editor').summernote('code');
         }
 
-        set widgetText(value) {
+        setWidgetText(value) {
             this._widgetText = value;
             $('#editor').summernote('code', this._widgetText);
 
+            console.log("setWidgetText");
+            console.log("Setter: " + this._widgetText);
+        }
+
+        getText() {
+            console.log("getText");
+            console.log("Getter: " + this._widgetText);
+            console.log("Getter: " + $('#editor').summernote('code', '<b> hello world </ b>'));
+
+            return $('#editor').summernote('code');
+        }
+
+        setText(value) {
+            this._widgetText = value;
+            $('#editor').summernote('code', this._widgetText);
+
+            console.log("setText");
             console.log("Setter: " + this._widgetText);
         }
     });

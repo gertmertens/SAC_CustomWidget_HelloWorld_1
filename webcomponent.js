@@ -89,7 +89,7 @@
         }
 
         setText(value) {
-            $('#editor').summernote('code', this._widgetText);
+            $('#editor').summernote('code', value);
         }
     });
 })();

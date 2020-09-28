@@ -26,7 +26,7 @@
 	"methods": {
 		"getText": {
 			"description": "Get the text value of the widget",
-			"body": "return this.widgetText;",
+			"parameters": [],
 			"returnType": "string"
 		},
 		"setText": {
@@ -37,8 +37,7 @@
 					"type": "string",
 					"description": "The content of the rich text editor"
 				}
-			],
-			"body": "this.widgetText = newTextValue;"
+			]
 		}
 	},
 	"events": {

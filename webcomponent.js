@@ -45,8 +45,6 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            console.log("After update:" + this._widgetText);
-
             this.redraw();
         }
         
@@ -84,22 +82,6 @@
                   ['view', ['fullscreen', 'codeview', 'help']]
                 ]
             });
-        }
-
-        getWidgetText() {
-            console.log("getWidgetText");
-            console.log("Getter: " + this._widgetText);
-            console.log("Getter: " + $('#editor').summernote('code'));
-
-            return $('#editor').summernote('code');
-        }
-
-        setWidgetText(value) {
-            this._widgetText = value;
-            $('#editor').summernote('code', this._widgetText);
-
-            console.log("setWidgetText");
-            console.log("Setter: " + this._widgetText);
         }
 
         getText() {

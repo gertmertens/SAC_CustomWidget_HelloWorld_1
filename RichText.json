@@ -18,10 +18,6 @@
         }
     ],
 	"properties": {
-		"widgetText": {
-			"type": "string",
-			"description": "The text of the editor."
-		}
 	},
 	"methods": {
 		"getText": {
